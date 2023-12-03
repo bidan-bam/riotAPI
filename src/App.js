@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider } from "react-router-dom";
+import router from "./Routes/routing";
+import { RecoilRoot } from "recoil";
+import GlobalStyles from "./Styles/globalStyle";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <GlobalStyles />
+      <RouterProvider router={router} />
+    </RecoilRoot>
   );
 }
 
